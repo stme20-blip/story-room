@@ -1,0 +1,44 @@
+{
+  "title": "지하철의 끝",
+  "start": "start",
+  "scenes": [
+    {
+      "id": "start",
+      "kind": "scene",
+      "body": [
+        "여름비가 그친 밤, 플랫폼에 안개가 얇게 깔리고 있다.",
+        "너는 그/그녀를 마주본다."
+      ],
+      "choices": [
+        { "text": "미소 지으며 이름을 부른다", "next": "hall", "effects": { "affection": 1 } },
+        { "text": "아무 말 없이 시선을 피한다", "next": "exit", "effects": { "affection": -1 } }
+      ]
+    },
+    {
+      "id": "hall",
+      "kind": "scene",
+      "body": [
+        "대합실의 형광등이 깜빡인다.",
+        "네가 미소 지으니, 상대의 어깨가 아주 조금 풀린다."
+      ],
+      "choices": [
+        { "text": "손을 내민다", "next": "end-warm", "effects": { "courage": 1 } },
+        { "text": "그냥 작게 인사만 한다", "next": "end-awkward" }
+      ]
+    },
+    {
+      "id": "exit",
+      "kind": "scene",
+      "body": [
+        "바람이 불어온다. 말하지 못한 문장이 입술에 걸린다."
+      ],
+      "choices": [
+        { "text": "뒤늦게 이름을 부른다", "next": "hall", "effects": { "courage": 1 } },
+        { "text": "그대로 돌아선다", "next": "end-silence", "effects": { "regret": 1 } }
+      ]
+    },
+    { "id": "end-warm", "kind": "ending", "title": "엔딩: 따뜻한 작별", "body": ["너희는 서로의 온도를 기억한다."] },
+    { "id": "end-awkward", "kind": "ending", "title": "엔딩: 어색한 거리", "body": ["말하지 못한 미소가 두 사람 사이를 오간다."] },
+    { "id": "end-silence", "kind": "ending", "title": "엔딩: 침묵", "body": ["아무 일도 일어나지 않았지만, 모든 것이 지나갔다."] }
+  ]
+}
